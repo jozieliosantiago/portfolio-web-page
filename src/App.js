@@ -1,7 +1,18 @@
 import React from 'react';
+import Routes from './routes';
+import { BrowserRouter } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import './styles/global.css';
 
-function App() {
-  return <h1>Portfolio Web Page</h1>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes />
+      <Footer />
+    </BrowserRouter>
+  )
 }
 
 export default App;
