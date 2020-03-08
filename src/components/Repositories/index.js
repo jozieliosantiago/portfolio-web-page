@@ -11,7 +11,7 @@ const Repositories = () => {
 
   useEffect(() => {
     async function fecthData() {
-      const response = await api.get('/jozieliosantiago/repos');
+      const response = await api.get('/jozieliosantiago/repos?sort=created');
       setRepositories(response.data);
     }
     fecthData();
