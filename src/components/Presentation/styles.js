@@ -14,6 +14,7 @@ export const Container = styled.div`
   background: url(${backgroundImage});
   background-attachment: fixed;
   background-size: cover;
+
   &:after {
     content: '';
     background-color: #000000e6;
@@ -24,6 +25,7 @@ export const Container = styled.div`
     left: 0;
     z-index: -1;
   }
+
   @media (max-width: 445px) {
     min-height: 75vh;
   }
@@ -34,12 +36,14 @@ export const Content = styled.div`
   max-width: 73%;
   text-align: center;
   color: #fff;
+
   h1 {
     font-size: 50px;
     font-weight: bold;
     letter-spacing: 10px;
     margin: 15px 0;
   }
+
   p {
     max-width: 530px;
     text-align: center;
@@ -50,9 +54,11 @@ export const Content = styled.div`
 
 export const SocialMedias = styled.div`
   margin: 15px 0;
+
   span {
     padding: 10px;
     font-size: 1.5em;
+
     a {
       color: #fff;
     }

@@ -12,6 +12,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 10px;
   transition: .4s;
+
   @media (max-width: 500px) {
     display: none;
   }
@@ -24,14 +25,17 @@ export const Menu = styled.div`
   max-width: 73%;
   height: 100px;
   width: 100%;
+
   ul {
     color: #fff;
     list-style: none;
     font-family: 'Roboto-Ligth';
+
     li {
       float: left;
       text-transform: uppercase;
       margin: 5px 10px;
+
       a {
         text-decoration: none;
         color: #fff;
@@ -43,6 +47,7 @@ export const Menu = styled.div`
 export const MobileMenu = styled.div`
   position: absolute;
   z-index: 1;
+
   .icon {
     position: absolute;
     left: 20px;
@@ -50,12 +55,14 @@ export const MobileMenu = styled.div`
     font-size: 2em;
     color: #fff;
   }
+
   .mobile-menu {
     width: 100vw;
     height: 100vh;
     background-color: #00000085;
     position: fixed;
     display: ${props => `${props.display}`};
+
     .close-icon {
       color: #fff;
       position: absolute;
@@ -65,6 +72,7 @@ export const MobileMenu = styled.div`
       top: 12px;
       animation: showCloseIcon 2s;
     }
+
     .options {
       position: fixed;
       width: 65vw;
@@ -73,13 +81,16 @@ export const MobileMenu = styled.div`
       padding: 40px 20px;
       display: ${props => `${props.display}`};
       animation: showMenu .5s;
+
       ul {
         color: #fff;
         list-style: none;
         font-family: 'Roboto-Ligth';
+
         li {
           text-transform: uppercase;
           margin: 10px 0;
+
           a {
             text-decoration: none;
             color: #fff;
@@ -87,16 +98,20 @@ export const MobileMenu = styled.div`
         }
       }
     }
+
     .hide-options {
       animation: hideMenu .7s;
     }
+
     .hide-close-icon {
       animation: hideCloseIcon .6s;
     }
   }
+
   @media (min-width: 500px) {
     display: none;
   }
+
   @keyframes showMenu {
     0% {
       left: -65vw;
@@ -105,6 +120,7 @@ export const MobileMenu = styled.div`
       left: 0vw;
     }
   }
+
   @keyframes hideMenu {
     0% {
       left: 0vw;
@@ -113,6 +129,7 @@ export const MobileMenu = styled.div`
       left: -65vw;
     }
   }
+
   @keyframes showCloseIcon {
     0% {
       color: #fff0;
@@ -121,6 +138,7 @@ export const MobileMenu = styled.div`
       color: #fff;
     }
   }
+
   @keyframes hideCloseIcon {
     0% {
       color: #fff;

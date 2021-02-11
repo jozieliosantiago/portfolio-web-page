@@ -4,12 +4,18 @@ import { faNodeJs, faNode, faJava, faCss3, faGithub, faReact } from '@fortawesom
 import { IconStyle } from './styles';
 
 const Icon = ({ language, title }) => {
+  function returnJavaScriptIcon() {
+    if (title.includes('backend') || title.includes('api')) return faNode;
+    if (title.includes('frontend') || title.includes('web') || title.includes('mobile')) return faReact;
+    return faNodeJs;
+  }
+
   const switchIcon = (language) => {
     switch (language.toLowerCase()) {
       case 'javascript':
-        if (title.search('backend') !== -1 || title.search('api') !== -1) return faNode;
-        if (title.search('frontend') !== -1 || title.search('web') !== -1 || title.search('mobile') !== -1) return faReact;
-        return faNodeJs;
+        return returnJavaScriptIcon();
+      case 'typescript':
+        return returnJavaScriptIcon();
       case 'java':
         return faJava;
       case 'css':

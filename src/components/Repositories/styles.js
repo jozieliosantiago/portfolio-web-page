@@ -7,6 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 100px 0;
+
   h2 {
     font-size: 30px;
     font-weight: bold;
@@ -20,13 +21,16 @@ export const RepositoriesContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-top: 35px;
+
   @media (min-width: 700px) {
     width: 73%;
   }
+
   @media (max-width: 765px) {
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
   }
+
   @media (max-width: 500px) {
     grid-template-columns: repeat(1, 1fr);
     width: 90%;

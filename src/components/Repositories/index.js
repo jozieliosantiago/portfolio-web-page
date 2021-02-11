@@ -6,13 +6,23 @@ import Loader from '../Loader';
 import { Container, RepositoriesContainer } from './styles';
 
 const Repositories = () => {
-
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
     async function fecthData() {
-      const response = await api.get('/jozieliosantiago/repos?sort=created');
-      setRepositories(response.data);
+      try {
+        const response = await api.get('users/jozieliosantiago/repos?sort=created');
+        const { data } = response;
+
+        const repositories = data.filter(repository =>
+          repository.name.search('.github.io') === -1 &&
+          repository.name.search('public-apis') === -1
+        );
+
+        setRepositories(repositories);
+      } catch (error) {
+        console.log(error)
+      }
     }
     fecthData();
   }, [])
@@ -27,9 +37,6 @@ const Repositories = () => {
             <RepositoriesContainer>
               {
                 repositories
-                  .filter(repository => {
-                    return repository.name.search('.github.io') === -1;
-                  })
                   .map(repository => (
                     <Card
                       key={repository.id}

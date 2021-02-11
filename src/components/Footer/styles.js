@@ -9,6 +9,7 @@ export const Container = styled.div`
   align-items: center;
   font-family: "Roboto", sans-serif;
   padding: 35px;
+
   p {
     font-size: 15px;
     color: #c9c9c9;
