@@ -10,7 +10,7 @@ const Footer = () => {
         <Icon>
           <FontAwesomeIcon icon={faCopyright} />
         </Icon>
-        Copyright 2020 Joziélio Santiago. All Rights Reserved</p>
+        Copyright 2021 Joziélio Santiago. All Rights Reserved</p>
     </Container>
   )
 }
