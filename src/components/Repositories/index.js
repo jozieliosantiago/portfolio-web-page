@@ -16,7 +16,8 @@ const Repositories = () => {
 
         const repositories = data.filter(repository =>
           repository.name.search('.github.io') === -1 &&
-          repository.name.search('public-apis') === -1
+          repository.name.search('public-apis') === -1 &&
+          repository.language
         );
 
         setRepositories(repositories);
